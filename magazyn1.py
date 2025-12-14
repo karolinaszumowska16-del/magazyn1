@@ -1,4 +1,11 @@
+Python
+
 import streamlit as st
+
+# --- Ładowanie niestandardowych stylów CSS ---
+# Upewnij się, że plik styles.css znajduje się w tym samym katalogu co app.py
+with open("styles.css") as f:
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # Inicjalizacja listy magazynu
 # Używamy zwykłej globalnej listy, ponieważ Streamlit bez stanu sesji
